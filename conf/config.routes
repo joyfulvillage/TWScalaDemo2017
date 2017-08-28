@@ -1,0 +1,8 @@
+###
+#  summary: Get some dynamic Config
+#  responses:
+#    200:
+#      schema:
+#        $ref: '#/definitions/models.ConfigOut'
+###
+GET /         controllers.ConfigOutController.getConfig

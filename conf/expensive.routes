@@ -1,0 +1,8 @@
+###
+#  summary: Get an expensive message
+#  responses:
+#    200:
+#      schema:
+#        $ref: '#/definitions/models.ExpensiveInfo'
+###
+GET /:userId/required       controllers.ExpensiveController.demoFE(userId: String, field: Option[String])

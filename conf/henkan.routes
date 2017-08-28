@@ -1,0 +1,27 @@
+###
+#  summary: Get an expensive message
+#  parameters:
+#    - name: id
+#      type: number
+#    - name: name
+#      type: string
+#  responses:
+#    200:
+#      schema:
+#        $ref: '#/definitions/models.ConvertedContinue'
+###
+GET /convert       controllers.HenkanController.convert(id: Int, name: String)
+
+###
+#  summary: Get an expensive message
+#  parameters:
+#    - name: id
+#      type: number
+#    - name: name
+#      type: string
+#  responses:
+#    200:
+#      schema:
+#        $ref: '#/definitions/models.Optionaled'
+###
+GET /optional       controllers.HenkanController.optional(id: Int, name: String)

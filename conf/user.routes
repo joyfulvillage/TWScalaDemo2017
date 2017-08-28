@@ -1,0 +1,8 @@
+###
+#  summary: Get a User message
+#  responses:
+#    200:
+#      schema:
+#        $ref: '#/definitions/models.User'
+###
+GET /:userId       controllers.UserController.getUser(userId: Int)
