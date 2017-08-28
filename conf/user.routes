@@ -1,8 +1,18 @@
 ###
 #  summary: Get a User message
+#  parameters:
+#    - name: name
+#      type: string
+#      in: query
+#    - name: age
+#      type: number
+#      in: query
+#    - name: email
+#      type: string
+#      in: header
 #  responses:
 #    200:
 #      schema:
 #        $ref: '#/definitions/models.User'
 ###
-GET /:userId       controllers.UserController.getUser(userId: Int)
+GET /:userId       controllers.UserController.getUser(userId: Int, name: String, age: Int)

@@ -1,19 +1,17 @@
 package service
 
-import models.{ ConvertedContinue, Identical, Original }
+import models.{ Converted, ConvertedContinue, Identical, Original }
 import henkan.convert.Syntax._
 
 class HenKanBackend {
 
-  def convert(original: Original): ConvertedContinue = {
+  def convertIt(original: Original): ConvertedContinue = {
 
-    //val converted = original.to[Identical]() //.set(magicWord = "Abracadabra") //.set(toBeDropped = "whatever").set(age = 18)
+    val identical = original.to[Identical]()
 
-    original.to[Identical]()
+    val converted = identical.to[Converted].set(magicWord = "Abracadabra", toBeDropped = "whatever", age = 18)
 
-    //converted
-
-    ???
+    converted.to[ConvertedContinue]()
   }
 
 }

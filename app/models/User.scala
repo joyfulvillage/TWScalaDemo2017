@@ -6,7 +6,7 @@ final case class User(
   id: Int,
   name: String,
   email: String,
-  address: String
+  age: Int
 )
 
 object User {

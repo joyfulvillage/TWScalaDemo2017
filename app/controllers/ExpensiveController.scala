@@ -12,8 +12,6 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 class ExpensiveController @Inject() (backend: ExpensiveBackend) extends Controller with JsonResponses {
 
-  //val backend = new ExpensiveBackend
-
   def demoFE(userId: String, field: Option[String]) = Action.async {
 
     backend

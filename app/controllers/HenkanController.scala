@@ -10,13 +10,13 @@ import scala.concurrent.Future
 
 class HenkanController @Inject() (backend: HenKanBackend) extends Controller with JsonResponses {
 
-  def convert(id: Int, name: String) = Action.async {
+  def convertIt(id: Int, name: String) = Action.async {
 
     val original = Original(1, "name 1")
 
-    val res = backend.convert(original)
+    val res = backend.convertIt(original)
 
-    Future.successful(Ok)
+    Future.successful(Ok(res))
   }
 
   def optional(id: Int, name: String) = Action.async {

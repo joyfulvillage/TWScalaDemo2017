@@ -10,7 +10,7 @@
 #      schema:
 #        $ref: '#/definitions/models.ConvertedContinue'
 ###
-GET /convert       controllers.HenkanController.convert(id: Int, name: String)
+GET /convert       controllers.HenkanController.convertIt(id: Int, name: String)
 
 ###
 #  summary: Get an expensive message
