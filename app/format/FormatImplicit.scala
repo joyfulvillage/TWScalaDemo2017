@@ -10,15 +10,15 @@ object FormatImplicit {
 
   final val key = "reason"
 
-  implicit class StrToErr(err: String) {
+  implicit class StrToErr(val err: String) extends AnyVal {
     def toErr: JsValue = Json.obj(key -> err)
   }
 
-  implicit class SeqStrToErr(err: Seq[String]) {
+  implicit class SeqStrToErr(val err: Seq[String]) extends AnyVal {
     def toErr: JsValue = Json.obj(key -> err.mkString(","))
   }
 
-  implicit class OptStrToErr(err: Option[String]) {
+  implicit class OptStrToErr(val err: Option[String]) extends AnyVal {
     def toErr: JsValue = err.fold[JsValue](JsNull)(e => Json.obj(key -> e))
   }
 
