@@ -2,7 +2,7 @@
 inThisBuild(Seq(organization := "com.iheart.example"))
 
 lazy val root = project.in(file("."))
-    .enablePlugins(PlayScala, SwaggerPlugin)
+  .enablePlugins(PlayScala, SwaggerPlugin)
   .settings(
     name := "meetup-demo",
     scalaVersion := "2.11.11",
