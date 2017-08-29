@@ -18,8 +18,10 @@ class ConfigOutController @Inject() (config: Configuration) extends Controller w
     val c = config.underlying
 
     val interval = c.as[FiniteDuration]("demo.interval")
+    println("interval: " + interval)
 
     val inner = c.as[Inner]("demo.inner")
+    println("inner: " + inner)
 
     val configOut = c.as[ConfigOut]("demo")
 
